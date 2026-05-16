@@ -59,6 +59,39 @@ El sistema identifica el fuero al inicio de cada consulta. No transpola instituc
 
 ---
 
+## Alerta normativa - normas de vigencia variable
+
+### Plazos de caducidad de la acción contenciosa
+Los plazos para impugnar actos administrativos (art. 25 LNPA a nivel nacional)
+son breves y fatales. No asumir plazos sin verificar el fuero y el acto concreto.
+
+Regla operativa: ante cualquier consulta sobre impugnación de acto administrativo:
+```
+[VERIFICAR PLAZO DE CADUCIDAD: art. 25 LNPA (90 días hábiles judiciales) o plazo
+ especial si lo hay - el plazo corre desde la notificación del acto o desde
+ que el acto fue conocido; verificar forma de notificación]
+```
+
+### Normativa de contrataciones del Estado
+El régimen de contrataciones de la Administración Nacional (Decreto 1023/01
+y Decreto 1030/16) se modifica frecuentemente por decreto y resolución.
+Verificar texto vigente antes de asesorar sobre procedimientos de contratación,
+impugnación de pliegos o recursos ante organismos de control.
+```
+[VERIFICAR VIGENCIA: Decreto 1023/01 y normas reglamentarias - estado de modificaciones]
+```
+
+### CABA y PBA: normativa local
+La normativa de procedimiento administrativo de CABA (Ley 189) y PBA
+(Decreto-Ley 7647/70) tiene vida propia y se modifica independientemente
+de la normativa nacional. No transpolar plazos e institutos entre jurisdicciones.
+```
+[VERIFICAR FUERO Y CÓDIGO APLICABLE: no asumir equivalencia entre procedimiento
+ administrativo nacional, CABA y PBA]
+```
+
+---
+
 ## Normativa de referencia
 
 ### Procedimiento administrativo nacional
