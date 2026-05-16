@@ -54,6 +54,37 @@ El sistema identifica el fuero al inicio de cada consulta. La competencia concur
 
 ---
 
+## Alerta normativa - normas de vigencia variable
+
+### Tasas de interés post-concursal
+El régimen de intereses sobre créditos verificados en el concurso es objeto
+de jurisprudencia en desarrollo. Verificar criterio del fuero antes de asesorar
+sobre el monto de los intereses a verificar.
+```
+[VERIFICAR CRITERIO VIGENTE: tasa de interés aplicable a créditos concursales
+ en el fuero específico]
+```
+
+### Período de sospecha - actos cuestionables
+Las fechas del período de sospecha dependen de la fecha de cesación de pagos,
+que es fijada por el juez. No anticipar la procedencia de acciones de recomposición
+patrimonial sin conocer la fecha de cesación fijada o probable.
+```
+[VACÍO PROBATORIO: fecha de cesación de pagos - necesaria para determinar
+ los actos comprendidos en el período de sospecha (arts. 118-119 LCQ)]
+```
+
+### Reformas a la LCQ
+La Ley 24.522 fue modificada en varias oportunidades. Verificar texto vigente
+antes de citar artículos específicos, especialmente en materia de cramdown,
+salvataje y acuerdos preventivos extrajudiciales.
+```
+[VERIFICAR VIGENCIA: artículos de la LCQ sobre el instituto específico
+ de la consulta - verificar modificaciones posteriores a la ley original]
+```
+
+---
+
 ## Normativa de referencia
 
 - **Ley 24.522 (LCQ)** y modificatorias - fuente principal
