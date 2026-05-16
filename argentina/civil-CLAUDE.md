@@ -2,7 +2,21 @@
 
 > Archivo de configuración para el sistema claude-for-legal.
 > Complementa el perfil general (argentina/CLAUDE.md) con lógica específica de práctica civil patrimonial.
-> Completar las secciones marcadas con [COMPLETAR] con los datos de la firma antes de usar.
+> **Configuración inicial obligatoria:** completar las variables de la sección siguiente antes de usar.
+
+---
+
+## Configuración inicial - completar antes de usar
+
+**FUERO_HABITUAL:**
+Indicar el fuero donde tramitan habitualmente tus causas civiles. Opciones: "fuero nacional civil (CABA)", "fuero nacional comercial (CABA)", "fuero local CABA (unificado)", "fuero civil y comercial PBA - [departamento judicial]", o combinación.
+
+Ejemplo: `FUERO_HABITUAL: Fuero nacional civil y comercial (CABA)`
+
+**AREAS_PRACTICA:**
+Indicar las áreas de mayor volumen dentro de civil patrimonial (daños y perjuicios, contratos, accidentes de tránsito, responsabilidad profesional, locaciones, etc.). El sistema prioriza la lógica de análisis correspondiente.
+
+Ejemplo: `AREAS_PRACTICA: Daños y perjuicios, accidentes de tránsito, responsabilidad profesional médica`
 
 ---
 
@@ -12,8 +26,8 @@ Este perfil cubre práctica civil patrimonial argentina: responsabilidad civil c
 
 No aplica doctrinas de common law de torts (duty of care anglosajón, punitive damages como categoría autónoma, contractual consideration). Las instituciones equivalentes argentinas tienen configuración propia y el sistema las trata como tales.
 
-**Fuero habitual:** [COMPLETAR]
-**Áreas de práctica dentro de civil:** [COMPLETAR]
+**FUERO_HABITUAL:** ver sección de configuración inicial
+**AREAS_PRACTICA:** ver sección de configuración inicial
 
 ---
 
@@ -30,15 +44,15 @@ No aplica doctrinas de common law de torts (duty of care anglosajón, punitive d
 
 - **Código:** CPCCN (Ley 17.454 y modificatorias)
 - **Juzgados:** Juzgados Nacionales de Primera Instancia en lo Comercial, CABA
-- **Alzada:** Cámara Nacional de Apelaciones en lo Comercial (CNAC Comercial)
+- **Alzada:** Cámara Nacional de Apelaciones en lo Comercial (CNACOM)
 - Competencia: contratos comerciales, responsabilidad derivada de actos de comercio, sociedades
 
 ### Fuero local CABA
 
-- **Código:** CPC CABA (Ley 6716 y modificatorias) - verificar estado de implementación
+- **Código:** CPC CABA (Ley 6716 y modificatorias) - en implementación progresiva; verificar si la causa tramita ante el fuero unificado local o ante el fuero nacional según fecha de inicio y materia
 - **Juzgados:** Juzgados de Primera Instancia en lo Civil, Comercial y de Familia CABA (fuero unificado)
 - **Alzada:** Cámara de Apelaciones en lo Civil, Comercial y de Familia CABA
-- Regla operativa: verificar si la causa tramita ante fuero nacional o local según fecha de inicio y materia
+- Regla operativa: verificar si la causa tramita ante fuero nacional o local según fecha de inicio, materia y si el demandado es el GCBA
 
 ### PBA
 
@@ -218,8 +232,11 @@ Alertas de diagnóstico por tipo de contrato:
 - Pacto de retroventa y retracto: verificar vigencia y plazos
 
 **Locación (arts. 1187-1226 CCCN):**
-- Ley 27.551 y modificatorias: actualizaciones, plazos mínimos, restricciones a garantías
-- Alertar: la normativa de locaciones urbanas sufrió modificaciones frecuentes; verificar vigencia antes de aplicar
+- **Ley 27.551 y modificatorias:** actualizaciones, plazos mínimos, restricciones a garantías
+- **Alerta de inestabilidad normativa:** el régimen de locaciones urbanas sufrió modificaciones frecuentes y significativas entre 2020 y 2024 (Ley 27.551, Ley 27.737, DNU 70/2023). Antes de aplicar cualquier regla sobre plazo mínimo, actualización del precio, garantías admisibles o rescisión anticipada, verificar el texto vigente al momento del contrato y al momento de la consulta. No asumir que el régimen que rigió un contrato anterior es el mismo que rige uno nuevo.
+```
+[VERIFICAR VIGENCIA: régimen de locaciones urbanas - Ley 27.551 y modificatorias al momento del contrato]
+```
 - Desalojo: proceso específico; verificar plazos de intimación previa y procedimiento según fuero
 
 **Mandato (arts. 1319-1334 CCCN):**
@@ -318,3 +335,10 @@ Alertas específicas:
 - Medidas cautelares: verificar si la materia admite tutela inhibitoria autónoma (art. 1711 CCCN) antes de optar por una cautelar clásica.
 - No cuantificar rubros sin material aportado. Si el abogado pide una estimación orientativa, brindarla con marcador [AVANCE BAJO RESERVA] y señalar qué falta para cuantificar con precisión.
 - Todo escrito civil cierra con "Estado del escrito" estándar más: fuero y competencia, régimen temporal aplicable (CC/CCom o CCCN), presencia de relación de consumo (sí/no), reclamo al asegurador (sí/no/a verificar), próximo plazo procesal si lo hay.
+
+---
+
+*Última actualización: mayo 2026*
+*Normativa base: CCCN (Ley 26.994), LDC (Ley 24.240), Ley 17.418 (seguros), Ley 24.449 (tránsito), Ley 27.551 y modificatorias (locaciones)*
+*Nota: para hechos o contratos anteriores al 1° de agosto de 2015, verificar régimen CC/CCom aplicable*
+*Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
