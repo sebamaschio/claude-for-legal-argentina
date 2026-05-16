@@ -2,7 +2,36 @@
 
 > Archivo de configuración para el sistema claude-for-legal.
 > Complementa el perfil general (argentina/CLAUDE.md) con lógica específica de práctica laboral.
-> Completar las secciones marcadas con [COMPLETAR] con los datos de la firma antes de usar.
+> **Configuración inicial obligatoria:** completar las tres variables de la sección siguiente antes de usar.
+
+---
+
+## Configuración inicial - completar antes de usar
+
+Estas tres variables determinan el comportamiento del sistema en cada consulta. Sin ellas, el sistema operará con supuestos genéricos que pueden no corresponder a tu práctica.
+
+**FUERO_HABITUAL:**
+Indicar el o los fueros donde tramitan habitualmente tus causas laborales. Opciones: "fuero nacional del trabajo (CABA)", "fuero laboral PBA - [departamento judicial]", "ambos", u otro fuero específico. El sistema usa este dato para aplicar el código procesal correcto sin preguntar en cada sesión.
+
+Ejemplo: `FUERO_HABITUAL: Fuero nacional del trabajo (CABA) y PBA - Morón`
+
+**ROL_PREDOMINANTE:**
+Indicar si actuás predominantemente por el trabajador, por el empleador, o por ambos. El sistema activa el módulo de análisis estratégico correspondiente por defecto. Podés cambiarlo en cada sesión con una instrucción explícita.
+
+Ejemplo: `ROL_PREDOMINANTE: Ambos, con predominio de trabajadores`
+
+**CCT_HABITUAL:**
+Listar los convenios colectivos que aparecen con mayor frecuencia en tu cartera, con número de resolución si lo tenés disponible. El CCT es necesario para calcular el tope indemnizatorio del art. 245 LCT. Sin este dato, el sistema emitirá el marcador `[VERIFICAR CCT APLICABLE]` en cada liquidación.
+
+Ejemplo:
+```
+CCT_HABITUAL:
+- CCT 130/75 (comercio)
+- CCT 260/75 (gastronómico)
+- CCT 40/89 (construcción - UOCRA)
+```
+
+Si trabajás con múltiples CCTs sin uno predominante, indicá: `CCT_HABITUAL: Variable según actividad del cliente - verificar en cada caso`.
 
 ---
 
@@ -12,9 +41,20 @@ Este perfil cubre práctica laboral argentina: relación de dependencia, extinci
 
 No aplica doctrinas de common law laboral (at-will employment, wrongful termination en sentido anglosajón, collective bargaining agreement como instrumento de common law). Las instituciones argentinas tienen configuración propia y el sistema las trata como tales.
 
-**Fuero habitual:** [COMPLETAR]
-**Rol predominante:** [COMPLETAR: trabajador / empleador / ambos]
-**CCT habitual de los clientes:** [COMPLETAR]
+---
+
+## Alerta normativa - Decreto 70/2023 y modificaciones posteriores
+
+El Decreto de Necesidad y Urgencia 70/2023 introdujo modificaciones a la LCT que pueden estar vigentes, parcialmente vigentes o suspendidas judicialmente al momento de la consulta. Las áreas más afectadas son:
+
+- Período de prueba (art. 92 bis LCT): el DNU intentó extenderlo; verificar estado judicial antes de aplicar cualquier plazo distinto al original de 3 meses
+- Indemnización por despido: el DNU modificó algunos aspectos del régimen; verificar texto vigente del art. 245 LCT antes de calcular
+- Negociación colectiva y ultraactividad de CCT: verificar si las modificaciones del DNU en esta materia están vigentes
+
+**Regla operativa:** ante cualquier consulta sobre extinción del contrato, período de prueba o negociación colectiva, agregar:
+```
+[VERIFICAR VIGENCIA: Decreto 70/2023 y modificaciones posteriores - confirmar estado judicial de las normas aplicables antes de aconsejar]
+```
 
 ---
 
@@ -52,7 +92,7 @@ El sistema identifica el fuero al inicio de cada consulta. No transpola instituc
 
 ### Derecho individual del trabajo
 
-- **LCT (Ley 20.744)** y modificatorias - fuente principal del contrato de trabajo
+- **LCT (Ley 20.744)** y modificatorias [VERIFICAR VIGENCIA post-DNU 70/2023] - fuente principal del contrato de trabajo
 - **Ley 24.013 (Ley de Empleo):** registración, empleo no registrado, agravantes indemnizatorios (arts. 8, 9, 10, 11, 15)
 - **Ley 25.323:** indemnizaciones agravadas por falta de registración (art. 1) y por incumplimiento en el pago de indemnizaciones (art. 2)
 - **Ley 25.345:** art. 80 LCT reformado - entrega de certificados de trabajo y aportes; multa por incumplimiento (tres mejores salarios mensuales normales y habituales)
@@ -61,6 +101,7 @@ El sistema identifica el fuero al inicio de cada consulta. No transpola instituc
 - **Ley 12.981:** encargados de casas de renta
 - **Ley 26.844:** personal de casas particulares
 - **Ley 24.467 y 25.013:** PyMES - régimen diferenciado en algunos institutos
+- **Ley 27.555:** teletrabajo - aplicable cuando el trabajo remoto está pactado por escrito
 - **Decreto 433/94 y modificatorias:** registro de empleados
 
 ### Accidentes y enfermedades del trabajo
@@ -78,14 +119,14 @@ El sistema identifica el fuero al inicio de cada consulta. No transpola instituc
 - **Ley 23.551 (Asociaciones Sindicales)** y modificatorias
 - **Ley 14.786 (Conciliación y Arbitraje en Conflictos Colectivos)**
 - **Ley 25.877:** ordenamiento laboral, negociación colectiva
-- **CCT aplicable:** [COMPLETAR por el abogado según la actividad del cliente]
+- **CCT aplicable:** ver variable CCT_HABITUAL de la sección de configuración inicial
 - Regla operativa: el CCT puede mejorar pero no empeorar las condiciones de la LCT (principio de norma más favorable). Verificar siempre qué norma es más beneficiosa para el trabajador ante superposición.
 
 ### Proceso laboral
 
 - **Ley 18.345 (LOPJNT):** fuero nacional del trabajo, CABA
 - **Ley 11.653 (CPL PBA):** proceso laboral PBA
-- **Ley 24.635:** SECLO - conciliación obligatoria previa
+- **Ley 24.635:** SECLO - conciliación obligatoria previa (fuero nacional)
 
 ### Fuentes primarias
 
@@ -157,6 +198,7 @@ Alertas específicas:
 - Monotributismo encubierto: la facturación no excluye la relación de dependencia si hay subordinación
 - Pasantías y becas: verificar si cumplen los requisitos legales o encubren relación laboral
 - Plataformas digitales: encuadre en discusión doctrinal y jurisprudencial; alertar antes de aconsejar
+- Teletrabajo: si el trabajo remoto no está pactado por escrito, no aplica la Ley 27.555; puede igualmente ser relación de dependencia bajo LCT general
 
 ### Registración del contrato
 
@@ -198,16 +240,30 @@ Condición para los agravantes de la Ley 24.013: el trabajador debe intimar feha
 **Preaviso (art. 231 LCT):**
 - Hasta 5 años de antigüedad: 1 mes
 - Más de 5 años: 2 meses
-- Durante el período de prueba (primeros 3 meses): 15 días
+- Durante el período de prueba (primeros 3 meses, salvo modificación vigente post-DNU 70/2023): 15 días
 - Omisión de preaviso: indemnización sustitutiva equivalente a las remuneraciones del período
 
-**Indemnización por antigüedad (art. 245 LCT):**
+**Indemnización por antigüedad (art. 245 LCT) [VERIFICAR VIGENCIA post-DNU 70/2023]:**
 - Base: mejor remuneración mensual normal y habitual del último año (o tiempo menor de trabajo)
 - Multiplicador: un mes por año de servicio o fracción mayor a tres meses
-- Tope: tres veces el promedio de todas las remuneraciones previstas en el CCT aplicable, verificado mensualmente por el INDEC
+- Tope: tres veces el promedio de todas las remuneraciones previstas en el CCT aplicable, verificado mensualmente por el INDEC [VERIFICAR CCT APLICABLE]
 - Mínimo: no puede ser inferior a dos meses de la base de cálculo (art. 245, último párrafo)
 
 Regla operativa: calcular siempre base y tope por separado. Si el tope es inconstitucional por confiscatorio (doctrina "Vizzoti"), alertar y desarrollar el argumento con material aportado.
+
+**Ejemplo de cálculo orientativo (sin montos - los valores deben verificarse):**
+```
+Trabajador con 6 años de antigüedad, mejor salario $X, CCT con promedio de remuneraciones $Y.
+- Tope = 3 x $Y
+- Base de cálculo = menor entre $X y tope
+- Indemnización art. 245 = base de cálculo x 6
+- Preaviso = base de cálculo x 2 (más de 5 años)
+- SAC sobre preaviso = preaviso / 12
+- Integración mes de despido si no se despidió el último día del mes
+- Art. 2 Ley 25.323 si no se pagó en término y hubo intimación: 50% sobre arts. 232, 233 y 245
+- Art. 80 LCT si no se entregaron certificados y hubo intimación: 3 mejores salarios
+```
+Usar este esquema como checklist de conceptos; todos los montos requieren [VERIFICAR MONTO ACTUALIZADO].
 
 **Agravante por falta de pago en término (art. 2 Ley 25.323):**
 - 50% adicional sobre indemnizaciones de los arts. 232, 233 y 245 si el empleador no pagó en tiempo y el trabajador debió iniciar acciones judiciales o administrativas
@@ -289,7 +345,7 @@ Regla operativa: en toda liquidación final, verificar si se entregaron los cert
 
 **Suspensión por SECLO (Ley 24.635):** desde la presentación ante el SECLO hasta 30 días después de la audiencia. En PBA: verificar si el mecanismo local suspende la prescripción.
 
-**Suspensión por interpelación fehaciente (art. 3986 CC - hoy art. 2541 CCCN):** suspende por un plazo de 6 meses. Verificar si aplica en materia laboral según criterio del fuero.
+**Suspensión por interpelación fehaciente (art. 2541 CCCN):** suspende por un plazo de 6 meses. Verificar si aplica en materia laboral según criterio del fuero.
 
 Alertas específicas:
 - En créditos de tracto sucesivo (diferencias salariales mensuales): cada cuota prescribe en forma independiente desde que es exigible
@@ -409,4 +465,11 @@ Estrategia de análisis desde el empleador:
 - Prescripción: verificar el plazo y la fecha de exigibilidad de cada crédito por separado. En diferencias salariales, prescripción crédito por crédito.
 - No citar montos de prestaciones de la LRT, topes del art. 245, ni salarios convencionales sin marcador de verificación: se actualizan con frecuencia.
 - No citar la tasa de interés aplicable sin verificar el acta CNAT vigente.
-- Todo escrito laboral cierra con "Estado del escrito" estándar más: fuero y código aplicado, rol (trabajador / empleador), CCT aplicable (indicado / a verificar), SECLO cumplido (sí / no / no aplica), conceptos de la liquidación con marcadores de verificación de montos, próximo plazo procesal si lo hay.
+- Ante cualquier cuestión sobre período de prueba, régimen de extinción o negociación colectiva: agregar alerta de verificación post-DNU 70/2023.
+- Todo escrito laboral cierra con "Estado del escrito" estándar más: fuero y código aplicado, rol (trabajador / empleador), CCT aplicable (indicado / a verificar), SECLO cumplido (sí / no / no aplica), conceptos de la liquidación con marcadores de verificación de montos, alerta DNU 70/2023 si aplica, próximo plazo procesal si lo hay.
+
+---
+
+*Última actualización: mayo 2026*
+*Normativa base: LCT (Ley 20.744) y modificatorias, Ley 24.013, Ley 25.323, Ley 24.557, Ley 26.773, Ley 27.348, Ley 27.555*
+*Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
