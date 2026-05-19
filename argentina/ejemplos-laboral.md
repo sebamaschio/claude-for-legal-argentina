@@ -12,7 +12,7 @@ Los valores de estas liquidaciones corresponden a una fecha determinada. Los sig
 
 - Salario básico convencional: fijado por acuerdo paritario del CCT aplicable
 - Tope indemnizatorio art. 245: tres veces el promedio del CCT, calculado mensualmente por el INDEC
-- Tasas de interés: fijadas por acta CNAT; verificar acta vigente al momento del cálculo
+- Tasas de interés: no hay criterio unificado vigente desde el Acta CNAT 2788/2024, que dejó sin efecto las Actas 2783/2784 sin establecer nueva tasa. Cada sala aplica su propio criterio. El Acta 2764/2022 fue dejada sin efecto por la CSJN ("Oliva"). Verificar criterio de la sala sorteada antes de calcular intereses.
 - Prestaciones LRT: actualizadas por resolución SRT
 
 Usar estos ejemplos como estructura de cálculo y checklist de rubros, no como referencia de montos actuales.
@@ -35,11 +35,13 @@ Usar estos ejemplos como estructura de cálculo y checklist de rubros, no como r
 | Rubro | Base | Cálculo | Resultado |
 |---|---|---|---|
 | Indemnización art. 245 | $750.000 (tope) | $750.000 x 5 años | $3.750.000 |
-| Preaviso art. 231 (hasta 5 años: 1 mes) | $750.000 | $750.000 x 1 | $750.000 |
-| SAC sobre preaviso | $750.000 | $750.000 / 12 | $62.500 |
+| Preaviso art. 231 (hasta 5 años: 1 mes) | $800.000 (mejor remuneración - sin tope) | $800.000 x 1 | $800.000 |
+| SAC sobre preaviso | $800.000 | $800.000 / 12 | $66.667 |
 | Vacaciones proporcionales (si corresponde) | [VERIFICAR días pendientes] | — | [CALCULAR] |
 | SAC proporcional | [VERIFICAR período] | — | [CALCULAR] |
-| **Total** | | | **$4.562.500 + rubros a verificar** |
+| **Total** | | | **$4.616.667 + rubros a verificar** |
+
+**Nota sobre el preaviso:** el tope del art. 245 aplica exclusivamente a la indemnización por antigüedad. El preaviso (art. 232 LCT) y el SAC sobre preaviso se calculan siempre sobre la mejor remuneración mensual normal y habitual, sin tope.
 
 **Notas:**
 - El tope del art. 245 es $750.000 (menor que la mejor remuneración de $800.000), por lo tanto la base de cálculo es el tope.
@@ -77,8 +79,11 @@ Condición: el trabajador intimó fehacientemente antes del despido (art. 11 Ley
 
 | Rubro | Norma | Cálculo | Resultado |
 |---|---|---|---|
-| Fecha de ingreso posterior a la real (2 años de diferencia) | Art. 9 Ley 24.013 | 25% de remuneraciones devengadas por el período no registrado | [CALCULAR: $600.000 x 24 meses x 25%] |
+| Relación no registrada durante el período no registrado (3 años reales - 2 años registrados = 1 año no registrado) | Art. 8 Ley 24.013 | 25% de las remuneraciones devengadas desde el inicio real hasta el momento del alta tardía ($600.000 x 12 meses x 25%) | [CALCULAR: $1.800.000] |
+| Fecha de ingreso posterior a la real (2 años de diferencia) | Art. 9 Ley 24.013 | 25% de las remuneraciones devengadas durante el período no registrado | [CALCULAR: $600.000 x 24 meses x 25%] |
 | Remuneración registrada inferior a la real ($200.000 de diferencia) | Art. 10 Ley 24.013 | 25% de la diferencia por el período en que rigió | [CALCULAR: $200.000 x meses x 25%] |
+
+Nota: los tres agravantes pueden concurrir en el mismo caso. En este ejemplo aplican todos porque hay falta de registración inicial (art. 8), fecha de alta posterior a la real (art. 9) y remuneración inferior a la real (art. 10). Verificar en cada caso qué agravantes se activan por separado.
 
 **Paso 3 - Agravante Ley 25.323 art. 1**
 
@@ -94,7 +99,7 @@ Aplica porque el empleador no pagó en término y el trabajador inició acciones
 
 | Rubro | Norma | Base | Resultado |
 |---|---|---|---|
-| 50% sobre arts. 232, 233 y 245 | Art. 2 Ley 25.323 | (Preaviso + integración + art. 245) | [CALCULAR] |
+| 50% sobre arts. 232, 233 y 245 | Art. 2 Ley 25.323 | Preaviso + art. 245 + integración si el despido no fue el último día del mes [VACÍO PROBATORIO: fecha del despido no informada en los datos del caso - determina si corresponde integración del mes en la base] | [CALCULAR] |
 
 **Paso 5 - Preaviso y SAC**
 
@@ -138,13 +143,20 @@ $1.800.000 (art. 245) + $1.800.000 (art. 1 Ley 25.323) + $600.000 (preaviso) + $
 | Rubro | Base | Cálculo | Resultado |
 |---|---|---|---|
 | Indemnización art. 245 | $1.100.000 (tope) | $1.100.000 x 8 años (7 años + fracción > 3 meses) | $8.800.000 |
-| Preaviso (más de 5 años: 2 meses) | $1.100.000 | $1.100.000 x 2 | $2.200.000 |
-| SAC sobre preaviso | $1.100.000 | ($1.100.000 x 2) / 12 | $183.333 |
+| Preaviso (más de 5 años: 2 meses) | $1.200.000 (mejor remuneración - sin tope) | $1.200.000 x 2 | $2.400.000 |
+| SAC sobre preaviso | $1.200.000 | ($1.200.000 x 2) / 12 | $200.000 |
 | Integración mes de despido (día 15 al último día del mes) | $1.100.000 | $1.100.000 / 30 x días restantes | [CALCULAR según días] |
 | SAC sobre integración | — | integración / 12 | [CALCULAR] |
 | Salarios adeudados (2 meses) | $1.200.000 | $1.200.000 x 2 | $2.400.000 |
 | SAC proporcional al semestre | [VERIFICAR período] | — | [CALCULAR] |
 | Vacaciones proporcionales | [VERIFICAR días] | — | [CALCULAR] |
+
+**Total orientativo (rubros con valor fijo):**
+$8.800.000 (art. 245) + $2.400.000 (preaviso) + $200.000 (SAC preaviso) + $2.400.000 (salarios adeudados) = $13.800.000
+
+**Nota sobre el preaviso:** el tope del art. 245 aplica exclusivamente a la indemnización por antigüedad. El preaviso (art. 232 LCT) y el SAC sobre preaviso se calculan siempre sobre la mejor remuneración mensual normal y habitual ($1.200.000 en este caso), sin tope.
+
+Rubros aún a calcular para el total completo: integración del mes de despido + SAC sobre integración + SAC proporcional al semestre + vacaciones proporcionales. No incluirlos en el total sin calcular los valores.
 
 **Notas:**
 - En el despido indirecto, la injuria del empleador debe ser suficientemente grave (estándar art. 242 LCT). La falta de pago de salarios por 2 meses es causal reconocida por la jurisprudencia, pero verificar que el trabajador intimó en forma previa y concedió plazo razonable.
@@ -156,6 +168,8 @@ $1.800.000 (art. 245) + $1.800.000 (art. 1 Ley 25.323) + $600.000 (preaviso) + $
 
 ## Ejemplo 4 - Accidente de trabajo, análisis de opciones
 
+**Alerta procesal previa (Ley 27.348):** antes de accionar judicialmente en el sistema LRT, el trabajador debe agotar la instancia ante las Comisiones Médicas Jurisdiccionales. El plazo para impugnar la resolución de la Comisión Médica es de 15 días; si no se impugna en término, la resolución queda firme. Verificar este requisito antes de analizar la estrategia.
+
 **Datos del caso:**
 - Trabajador: operario de construcción (CCT 40/89 - UOCRA)
 - Incapacidad permanente parcial: 35%
@@ -166,8 +180,8 @@ $1.800.000 (art. 245) + $1.800.000 (art. 1 Ley 25.323) + $600.000 (preaviso) + $
 
 | Concepto | Fórmula | Resultado |
 |---|---|---|
-| Prestación dineraria por ILPP | 53 x IBM x %incapacidad x coeficiente de edad [VERIFICAR CRITERIO DEL FUERO: fórmula de cuantificación LRT vigente - resolución SRT y jurisprudencia aplicable] | [CALCULAR] |
-| Piso mínimo (Ley 26.773) | [VERIFICAR MONTO ACTUALIZADO: resolución SRT vigente] | — |
+| Prestación dineraria por ILPP | Fórmula legal (art. 14 Ley 24.557, modificado por Ley 26.773): 53 x IBM x %incapacidad x coeficiente de edad. La fórmula es estable; los valores de actualización del IBM y los pisos mínimos se fijan por resolución SRT y varían periódicamente. [VERIFICAR CRITERIO DEL FUERO: el fuero puede apartarse de la fórmula legal en casos de inconstitucionalidad parcial] | [CALCULAR] |
+| Piso mínimo (Ley 26.773) | [VERIFICAR MONTO ACTUALIZADO: piso mínimo LRT - resolución SRT vigente] | - |
 | Adicional del 20% (art. 3 Ley 26.773) | 20% sobre la prestación | [CALCULAR] |
 
 **Paso 2 - Estimar acción civil (si el trabajador opta por esta vía)**
@@ -192,15 +206,57 @@ Factores para la decisión:
 
 ---
 
+## Ejemplo 5 - Despido durante el embarazo, arts. 178 y 182 LCT
+
+**Datos del caso:**
+- Trabajadora: empleada de comercio, CCT 130/75
+- Antigüedad: 3 años y 1 mes
+- Mejor remuneración mensual normal y habitual: $900.000
+- Tope art. 245 para CCT 130/75 al momento del despido: $850.000 (hipotético - verificar)
+- La trabajadora notificó fehacientemente el embarazo al empleador
+- El despido se produjo dentro del período de estabilidad (art. 178 LCT)
+- El empleador no invocó causa ajena al embarazo
+- El despido ocurrió el día 20 del mes
+
+**Presupuesto del agravante art. 182:**
+El empleador conocía el embarazo (notificación fehaciente) y no acreditó causa ajena. La presunción del art. 178 LCT no fue destruida. Aplica el agravante del art. 182 LCT: indemnización especial equivalente a un año de remuneraciones, que se acumula con las indemnizaciones ordinarias.
+
+**Cálculo:**
+
+| Rubro | Base | Cálculo | Resultado |
+|---|---|---|---|
+| Indemnización art. 245 | $850.000 (tope) | $850.000 x 4 años (3 años + fracción > 3 meses) | $3.400.000 |
+| Preaviso art. 231 (hasta 5 años: 1 mes) | $900.000 (mejor remuneración - sin tope) | $900.000 x 1 | $900.000 |
+| SAC sobre preaviso | $900.000 | $900.000 / 12 | $75.000 |
+| Integración mes de despido (día 20 al último día del mes) | $900.000 | $900.000 / 30 x días restantes | [CALCULAR según días del mes] |
+| SAC sobre integración | — | integración / 12 | [CALCULAR] |
+| Indemnización especial art. 182 | $900.000 | $900.000 x 12 | $10.800.000 |
+| SAC proporcional al semestre | [VERIFICAR período] | — | [CALCULAR] |
+| Vacaciones proporcionales | [VERIFICAR días] | — | [CALCULAR] |
+
+**Total orientativo (rubros con valor fijo):**
+$3.400.000 (art. 245) + $900.000 (preaviso) + $75.000 (SAC preaviso) + $10.800.000 (art. 182) = $15.175.000
+
+Rubros aún a calcular: integración del mes + SAC sobre integración + SAC proporcional + vacaciones. No incluirlos en el total sin calcular los valores.
+
+**Notas críticas:**
+- El art. 182 no reemplaza las indemnizaciones ordinarias: acumula sobre arts. 232, 233 y 245.
+- La base del art. 182 es la mejor remuneración mensual normal y habitual, sin tope del art. 245.
+- La presunción del art. 178 es iuris tantum: el empleador puede destruirla probando causa ajena al embarazo. Si hay causa documentada e independiente del estado de gravidez, analizar antes de incluir el agravante.
+- Verificar que la notificación del embarazo fue fehaciente y anterior al despido: sin notificación, la presunción puede no activarse según criterio de la sala. [INSERTAR FALLO VERIFICADO: sala CNAT, criterio sobre notificación del embarazo como presupuesto del art. 178]
+- Si el empleador no pagó en término y la trabajadora inició acciones: verificar también art. 2 Ley 25.323 sobre las indemnizaciones ordinarias. El art. 182 no integra la base del art. 2 Ley 25.323.
+
+---
+
 ## Checklist de rubros - liquidación final completa
 
 Usar como control antes de cerrar cualquier liquidación. Marcar cada rubro como: aplica / no aplica / a verificar.
 
 **Rubros indemnizatorios:**
 - [ ] Indemnización art. 245 LCT (base y tope verificados)
-- [ ] Preaviso art. 231 LCT (período según antigüedad)
-- [ ] SAC sobre preaviso
-- [ ] Integración mes de despido (si el despido no fue el último día del mes)
+- [ ] Preaviso omitido: indemnización sustitutiva art. 232 LCT (cuando el empleador no preavisó; período según antigüedad). Si el empleador otorgó el preaviso trabajado, este rubro no aplica.
+- [ ] SAC sobre preaviso (solo si aplica el art. 232)
+- [ ] Integración mes de despido art. 233 LCT (si el despido no fue el último día del mes)
 - [ ] SAC sobre integración
 
 **Rubros remuneratorios pendientes:**
@@ -217,11 +273,12 @@ Usar como control antes de cerrar cualquier liquidación. Marcar cada rubro como
 - [ ] Art. 1 Ley 25.323 (duplicación por falta de registración)
 - [ ] Art. 2 Ley 25.323 (50% por falta de pago en término) - ¿hubo intimación y acciones?
 - [ ] Art. 80 LCT / Ley 25.345 (multa por falta de certificados) - ¿hubo intimación?
+- [ ] Art. 182 LCT (un año de remuneraciones adicional) - ¿el despido ocurrió durante el período de estabilidad por embarazo art. 178? ¿el empleador conocía el estado de gravidez?
 
 **Verificaciones obligatorias antes de cerrar:**
 - [ ] CCT aplicable identificado
 - [ ] Tope art. 245 verificado para ese CCT al momento del despido
-- [ ] Tasa de interés CNAT: acta vigente identificada
+- [ ] Tasa de interés: sin acta unificada vigente (Acta 2788/2024) - verificar criterio de la sala sorteada
 - [ ] SECLO cumplido (fuero nacional) o equivalente provincial
 - [ ] Plazo de prescripción verificado por cada rubro
 
