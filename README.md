@@ -67,89 +67,52 @@ argentina/
 
 ---
 
-## Antes de empezar
+## Lo que necesitás
 
-Necesitás dos cosas:
-
-- **Cuenta de GitHub gratuita.** GitHub es la plataforma donde vive el repositorio. Entrá a [github.com](https://github.com), clic en **Sign up**, completá email y contraseña, verificá el email. Toma tres minutos y no cuesta nada.
-- **Cuenta de Claude.ai.** El Método 1 funciona con el plan gratuito. Los Métodos 2 y 3 requieren plan Pro.
-
-No necesitás saber programar para ninguno de los tres métodos.
+1. Una suscripción paga de Claude - Plan Pro (u$s 20/mes), Max, Team o Enterprise. El plan gratuito no sirve.
+2. La aplicación de escritorio Claude
 
 ---
 
-## Pasos comunes (hacelos una sola vez, antes de elegir método)
+## Instalación
 
-### Paso 1: Crear cuenta en GitHub (si no tenés)
+### Paso 1: Descargá la aplicación de escritorio
 
-1. Entrá a [github.com](https://github.com) y hacé clic en **Sign up**.
-2. Completá email, contraseña y nombre de usuario. El plan gratuito es suficiente.
-3. Verificá tu email.
+Entrá a [claude.ai/download](https://claude.ai/download) y bajá la app para Windows o Mac. Instalala como cualquier otro programa.
 
-### Paso 2: Fork del repositorio
+### Paso 2: Abrí Cowork
 
-"Fork" significa hacer una copia del repositorio en tu propia cuenta. Es necesario para poder personalizarlo y recibir actualizaciones.
+Una vez abierta la app, vas a ver una barra en la parte superior con distintas pestañas. Hacé clic en "Cowork".
 
-1. Entrá a [github.com/cristianaboitiz-eng/claude-for-legal-argentina](https://github.com/cristianaboitiz-eng/claude-for-legal-argentina).
-2. Hacé clic en el botón **Fork**, arriba a la derecha del nombre del repositorio (no de la página).
-3. Dejá todo como está y confirmá con **Create fork**.
+Cowork es el entorno de trabajo avanzado donde viven los plugins. La primera vez te va a pedir que configures acceso a una carpeta de tu computadora - dáselo a una carpeta donde tengas documentos de trabajo (contratos, escritos, lo que sea). Claude va a poder leer los archivos de esa carpeta.
 
-Ahora tenés tu propia copia en `github.com/TU-USUARIO/claude-for-legal-argentina`.
+### Paso 3: Instalá el plugin legal
 
-### Paso 3: Activar actualizaciones automáticas diarias
+Dentro de Cowork, hacé clic en "Customize" (Personalizar) en la barra lateral izquierda. Eso abre el menú de plugins, skills y conectores. [Más información](https://support.claude.com/en/articles/13837440-use-plugins-in-claude-cowork)
 
-El repositorio se actualiza con cambios normativos y mejoras. Este paso hace que tu copia los incorpore sola todos los días a las 03:00 (hora Argentina), sin que tengas que hacer nada.
+Desde ahí:
 
-1. En tu fork, hacé clic en la pestaña **Settings**.
-2. En el menú izquierdo, buscá **Actions** → **General**.
-3. Bajá hasta **Workflow permissions**, seleccioná **Read and write permissions** y guardá.
-4. Hacé clic en la pestaña **Actions** de tu fork.
-5. Buscá el workflow **Sync upstream** y hacé clic en **Run workflow** para verificar que funciona.
+1. Clic en "Browse plugins" (Explorar plugins).
+2. Buscá Legal en la lista.
+3. Clic en Install.
 
-Una vez hecho esto, elegí tu método de instalación.
+Después de instalarlo, el plugin ejecuta automáticamente una entrevista inicial. Te pregunta sobre tu práctica: jurisdicción, tipo de trabajo habitual, a quién escalás, etc. Con esas respuestas arma tu perfil de práctica, y de ahí en más todos los flujos de trabajo corren contra ese contexto, no contra una plantilla genérica. Eso es lo que diferencia esta herramienta de un chat común.
 
----
+### Paso 4: Elegí qué plugins instalar
 
-## Elegí tu método de instalación
+Instalá los que correspondan a tu práctica. Podés instalar varios.
 
-| | Método 1 - Claude.ai web | Método 2 - Claude Cowork | Método 3 - Claude Code |
-|---|---|---|---|
-| Plan requerido | Gratuito o Pro | Pro | Pro |
-| Instalación | Sin instalar nada | App de escritorio | Terminal + programas |
-| Tiempo de setup | 10 minutos | 20-30 minutos | 30-40 minutos |
-| Actualizaciones automáticas | Sí | Sí | Sí |
-| Recomendado para | Empezar hoy | Uso diario avanzado | Máximo control |
+### Paso 5: Empezar a usarlo
 
-**Si nunca usaste Claude más allá del chat: empezá por el Método 1.** Funciona, es inmediato y no requiere nada más que lo que ya tenés.
+Después de la instalación, las skills (habilidades) se activan automáticamente cuando son relevantes. También podés invocarlas manualmente escribiendo "/" para ver la lista de comandos disponibles.
 
 ---
 
-## Método 1: Claude.ai web (sin instalar nada)
+## Perfiles por área
 
-Funciona desde el browser, sin descargar nada, sin abrir una terminal. Compatible con el plan gratuito.
+Los plugins disponibles corresponden a las áreas de práctica cubiertas por este sistema:
 
-### Paso 1: Copiar el contenido del perfil general
-
-1. En tu fork, hacé clic en la carpeta `argentina/` y después en el archivo `CLAUDE.md`.
-2. En la barra de herramientas que aparece encima del contenido del archivo, buscá el ícono de dos rectángulos superpuestos (**Copy raw file**). Hacé clic. El contenido completo queda copiado en tu portapapeles.
-
-> Si no encontrás ese ícono: hacé clic en el botón **Raw** (misma barra), seleccioná todo con Ctrl+A (Windows) o Cmd+A (Mac) y copiá con Ctrl+C / Cmd+C.
-
-### Paso 2: Crear un Project en Claude y cargar el perfil
-
-1. Abrí [claude.ai](https://claude.ai). En el panel izquierdo, hacé clic en **Projects** y después en **New Project**.
-2. Poné el nombre que quieras: "Práctica Argentina", el nombre de tu estudio, o uno por materia.
-3. Dentro del Project recién creado, hacé clic en el ícono de ajustes (engranaje) o en **Edit project instructions**.
-4. En el campo de instrucciones que se abre, pegá el contenido que copiaste (Ctrl+V / Cmd+V).
-5. Guardá.
-
-Cada conversación nueva dentro de ese Project va a tener la configuración argentina cargada desde el inicio.
-
-### Paso 3: Agregar los perfiles por área
-
-Para cada materia que uses, repetí el mecanismo del Paso 1 con el archivo correspondiente y pegá el contenido adicional en el mismo campo de instrucciones del Project, a continuación del texto que ya está.
-
-| Archivo | Área | Complementos | Alertas |
+| Archivo de perfil | Área | Complementos | Alertas |
 |---|---|---|---|
 | `laboral-CLAUDE.md` | Derecho del trabajo (LCT) | `ejemplos-laboral.md` | DNU 70/2023, topes art. 245, tasas CNAT |
 | `administrativo-CLAUDE.md` | Derecho administrativo | - | Plazos de caducidad, contratación pública |
@@ -160,125 +123,6 @@ Para cada materia que uses, repetí el mecanismo del Paso 1 con el archivo corre
 | `tributario-CLAUDE.md` | Derecho tributario | - | Alícuotas, MNI, umbrales de punibilidad |
 | `concursos-CLAUDE.md` | Concursos y quiebras (LCQ) | - | Tasas post-concursales, reformas LCQ |
 | `contratos-CLAUDE.md` | Revisión y redacción de contratos | `red-flags-contratos.md` | Régimen cambiario, locaciones, intertemporalidad |
-
-Podés tener un Project general con el `CLAUDE.md` base y Projects separados por materia, cada uno con su perfil específico. Organizalo según tu flujo.
-
-`red-flags-contratos.md` se activa automáticamente desde el `CLAUDE.md` general ante cualquier contrato aportado en sesión; no requiere cargarlo por separado salvo que uses el perfil de contratos dedicado.
-
-### Paso 4: Agregar los skills (opcional pero recomendado)
-
-Usando el mismo mecanismo del Paso 1, copiá y pegá en las instrucciones del Project:
-
-- `diagnostico-SKILL.md`: el sistema diagnostica escritos antes de modificarlos, identifica argumentos sin respaldo, hechos no acreditados y contradicciones internas.
-- `plazos-SKILL.md`: calcula plazos en días hábiles judiciales y administrativos, días corridos, meses y años, con suspensiones por feria judicial, mediación prejudicial y SECLO. Se activa automáticamente ante consultas de prescripción o caducidad cuando está cargado junto con `civil-CLAUDE.md`, `laboral-CLAUDE.md` o `administrativo-CLAUDE.md`.
-
-Para verificar que el skill de diagnóstico funciona, usá `diagnostico-casos-prueba.md`: pegá uno de los escritos de prueba y comparás el output con el diagnóstico esperado documentado en el archivo.
-
-### Paso 5: Configuración personalizada del estudio (opcional)
-
-El archivo `legal.local.md.template` contiene variables específicas del estudio: jurisdicción, fuero, departamento judicial, CCT habitual, tasa de interés y preferencias de formato, organizadas por rama del derecho.
-
-1. Abrí `legal.local.md.template` en tu fork (mismo mecanismo del Paso 1).
-2. Pegá el contenido en un editor de texto (el Bloc de notas es suficiente), completá los campos que correspondan a tu práctica y guardá el archivo como `legal.local.md`.
-3. En las instrucciones del Project, pegá el contenido de ese archivo junto con el `CLAUDE.md`. El sistema lo prioriza sobre los valores genéricos del perfil.
-
-> No subás `legal.local.md` al repositorio. El template (`legal.local.md.template`) sí forma parte del repo.
-
-Sin esta configuración, el `CLAUDE.md` genérico funciona pero opera con supuestos genéricos de jurisdicción y área.
-
----
-
-## Método 2: Claude Cowork (app de escritorio)
-
-Cowork es la aplicación de escritorio de Claude. Requiere plan Pro.
-
-### Paso 1: Descargar el repositorio a tu computadora
-
-1. En tu fork, hacé clic en el botón verde **Code**.
-2. En el menú que aparece, clic en **Download ZIP**.
-3. Descomprimí el archivo en una carpeta accesible. Por ejemplo: `C:\Users\TuNombre\claude-for-legal-argentina` en Windows, o `/Users/TuNombre/claude-for-legal-argentina` en Mac.
-
-### Paso 2: Descargar e instalar Claude Cowork
-
-Entrá a [claude.ai/download](https://claude.ai/download), descargá la aplicación **Claude Cowork** para tu sistema operativo e instalá como cualquier programa. Iniciá sesión con tu cuenta Pro.
-
-### Paso 3: Cargar el perfil argentino
-
-1. Abrí la carpeta que descomprimiste en el Paso 2 y navegá a `argentina/`.
-2. Abrí `CLAUDE.md` con el Bloc de notas (Windows) o TextEdit (Mac). Copiá todo el contenido.
-3. En Cowork, creá un nuevo Project y pegá el contenido en el campo de instrucciones.
-
-Para los perfiles por área y los skills, repetí el mismo mecanismo con los archivos correspondientes de la carpeta `argentina/`.
-
-### Paso 4: Configuración personalizada del estudio (opcional)
-
-Igual que en el Método 1, Paso 5, con la diferencia de que en Cowork podés guardar `legal.local.md` directamente en la carpeta del repositorio descargado. El sistema lo detecta y lo lee automáticamente.
-
----
-
-## Método 3: Claude Code (terminal)
-
-Claude Code es la versión de línea de comandos. Es el método más completo y el que da mayor control sobre el entorno. Requiere plan Pro e instalar algunos programas.
-
-Invertís 30-40 minutos de configuración inicial.
-
-### Paso 1: Instalar Git
-
-Git es el programa que permite descargar y mantener actualizado el repositorio.
-
-1. Entrá a [git-scm.com/downloads](https://git-scm.com/downloads), elegí tu sistema operativo y descargá el instalador.
-2. Instalá con siguiente, siguiente, finalizar. No cambies ninguna opción por defecto.
-3. Para verificar: abrí la terminal (en Windows: tecla Windows + R, escribí `cmd`, Enter; en Mac: Cmd+Espacio, escribí `Terminal`, Enter) y escribí:
-
-```
-git --version
-```
-
-Si devuelve algo como `git version 2.x.x`, está instalado.
-
-### Paso 2: Instalar Node.js
-
-Entrá a [nodejs.org](https://nodejs.org), descargá la versión **LTS** e instalá con siguiente, siguiente, finalizar.
-
-### Paso 3: Instalar Claude Code
-
-En la terminal, escribí:
-
-```
-npm install -g @anthropic-ai/claude-code
-```
-
-Esperá que termine. Después verificá con:
-
-```
-claude --version
-```
-
-La primera vez que corras `claude`, te va a pedir que iniciés sesión con tu cuenta Pro. Seguí las instrucciones en pantalla.
-
-### Paso 4: Clonar el repositorio
-
-En la terminal:
-
-```
-git clone https://github.com/TU-USUARIO/claude-for-legal-argentina
-```
-
-Reemplazá `TU-USUARIO` con tu nombre de usuario de GitHub. Tu nombre de usuario es el que aparece en la URL de tu perfil: `github.com/TU-USUARIO`. Esperá que termine. Después:
-
-```
-cd claude-for-legal-argentina
-```
-
-### Paso 5: Cargar el perfil argentino
-
-Abrí `argentina/CLAUDE.md` con cualquier editor de texto, copiá todo el contenido y pegalo en las instrucciones del Project de Claude Code que vayas a usar.
-
-Para los perfiles por área y los skills, repetí el mismo mecanismo con los archivos correspondientes.
-
-La configuración personalizada del estudio (`legal.local.md`) va en el mismo directorio donde corrés Claude Code. El sistema lo detecta y lo lee automáticamente en cada sesión.
-
-> No subás `legal.local.md` al repositorio. Agregalo a `.gitignore`.
 
 ---
 
