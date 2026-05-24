@@ -131,7 +131,7 @@ Regla operativa: en toda consulta tributaria, agregar al cierre:
 | IVA | Ley 23.349 y DR Decreto 692/98 [VERIFICAR VIGENCIA] |
 | Ganancias (personas humanas) | Ley 20.628 y DR Decreto 862/19 [VERIFICAR VIGENCIA: el DR fue objeto de modificaciones desde 2019] |
 | Ganancias (sociedades) | Ley 20.628, arts. 69 y ss. |
-| Bienes Personales | Ley 23.966 Título VI y modificatorias |
+| Bienes Personales | Ley 23.966 Título VI reformada por Ley 27.743 [VERIFICAR VIGENCIA: MNI $100M, alícuotas reducidas escalonadas 2023-2026] |
 | Ganancia Mínima Presunta | Ley 25.063 - **DEROGADA** por art. 76 Ley 27.260 con vigencia desde el ejercicio fiscal iniciado el 1° de enero de 2019. No aplica a períodos posteriores. Para períodos anteriores a 2019, puede haber ajustes o litigios pendientes bajo el régimen derogado. Nota jurisprudencial: la CSJN declaró la inconstitucionalidad del impuesto por confiscatorio en varios precedentes anteriores a la derogación (períodos 2002-2018). Esta doctrina puede ser relevante en litigios de esos períodos; verificar los fallos aplicables antes de analizar un caso de esos ejercicios. |
 | Seguridad social | Ley 24.241 (SIPA), Ley 24.714 (asignaciones), Decreto 814/01 y modificatorias [VERIFICAR VIGENCIA] |
 | Impuesto a los débitos y créditos bancarios | Ley 25.413 |
@@ -326,6 +326,74 @@ AFIP implementa planes de facilidades de pago de manera permanente (Planes AFIP)
 - Efectos sobre las sanciones (condonación parcial o total)
 - Efectos sobre la prescripción (suspensión o interrupción según el plan)
 
+### Reforma fiscal Ley 27.743 (Paquete Fiscal - BO 8-jul-2024)
+
+**Trib-A: Moratoria fiscal**
+
+Ley 27.743 instauró régimen de regularización de obligaciones tributarias vencidas al 31-mar-2024. Plazo de adhesión: 150 dias corridos desde la reglamentacion ARCA. Reglamentacion: Decreto 658/2024.
+
+- Alcance: deudas impositivas, aduaneras y de seguridad social vencidas al 31-mar-2024
+- Condonacion parcial o total de intereses y multas segun modalidad de pago elegida
+- Suspension/interrupcion de la prescripcion segun regimen especifico
+- Suspension de causas penales tributarias durante adhesion [VERIFICAR VIGENCIA: condiciones actuales del regimen]
+
+Regla operativa: verificar plazos exactos y condiciones puntuales en la RG ARCA vigente; el regimen tiene escalas de descuento por modalidad y fecha de adhesion.
+```
+[VERIFICAR VIGENCIA: moratoria Ley 27.743 - RG ARCA vigente - plazos y condiciones de adhesion]
+```
+
+**Trib-B: Regimen de Regularizacion de Activos (blanqueo etapado)**
+
+Ley 27.743 introdujo regimen de blanqueo de capitales con tres etapas escalonadas. Reglamentacion ARCA.
+
+Etapas y alicuotas:
+- Etapa 1 (hasta 30-sep-2024): alicuota 5%
+- Etapa 2 (hasta 31-dic-2024): alicuota 10%
+- Etapa 3 (hasta 30-abr-2025): alicuota 15%
+
+Bienes incluidos: moneda nacional, extranjera, inmuebles, muebles, creditos, derechos y otros segun RG ARCA.
+Beneficios: liberacion de impuestos omitidos sobre bienes blanqueados, sujeto a cumplimiento de requisitos formales y temporales.
+
+Regla operativa: verificar RG ARCA vigente para listado de bienes admisibles, plazos y procedimiento de adhesion.
+```
+[VERIFICAR VIGENCIA: blanqueo Ley 27.743 - etapas y alicuotas - RG ARCA vigente]
+```
+
+**Trib-C: Bienes Personales reformado**
+
+Ley 27.743 reformo sustancialmente el impuesto a los Bienes Personales:
+- Minimo no imponible elevado a $100.000.000 (cien millones)
+- Alicuota maxima reducida escalonada:
+  - 2023: 1,75%
+  - 2024: 1,50%
+  - 2025: 1,25%
+  - 2026: 0,75%
+
+```
+[VERIFICAR MONTO ACTUALIZADO: Bienes Personales - MNI y alicuotas reformadas por Ley 27.743 - verificar periodo fiscal aplicable]
+```
+
+**Trib-D: Ganancias - modificaciones Ley 27.743**
+
+Ley 27.743 introdujo modificaciones en escalas y deducciones del impuesto a las Ganancias. Verificar texto vigente antes de asesorar sobre liquidacion del periodo 2024 en adelante.
+```
+[VERIFICAR VIGENCIA: Ganancias - escalas y deducciones reformadas por Ley 27.743]
+```
+
+**Trib-E: Monotributo - modificaciones Ley 27.743**
+
+Categorias y limites de facturacion del Monotributo actualizados por Ley 27.743. Verificar texto y RG ARCA vigentes antes de asesorar sobre recategorizacion o permanencia en el regimen.
+```
+[VERIFICAR MONTO ACTUALIZADO: Monotributo - categorias y limites Ley 27.743 - RG ARCA vigente]
+```
+
+**Trib-F: RIGI - beneficios tributarios (cross-reference)**
+
+El RIGI (Ley 27.742 Cap VII) otorga beneficios fiscales especificos para VPU adherentes: Ganancias reducida, IVA, deducciones aceleradas, regimen aduanero especial. Ver perfil administrativo-CLAUDE.md seccion RIGI para la estructura del regimen.
+```
+[VERIFICAR VIGENCIA: RIGI - beneficios tributarios Ley 27.742 Cap VII + Decreto 749/2024 + resoluciones sectoriales]
+```
+
 ### Precios de transferencia
 
 Para operaciones entre sujetos vinculados (art. 17 Ley 20.628):
@@ -425,7 +493,9 @@ Preguntas de diagnóstico:
 
 ---
 
-*Última actualización: mayo 2026*
-*Normativa base: Ley 11.683 (LPT), Ley 23.349 (IVA), Ley 20.628 (Ganancias), Ley 27.430 (Régimen Penal Tributario), Convenio Multilateral 18/08/1977*
-*Nota: Ganancia Mínima Presunta (Ley 25.063) derogada desde ejercicio 2019 (art. 76 Ley 27.260)*
+*Ultima actualizacion: mayo 2026*
+*Normativa base: Ley 11.683 (LPT), Ley 23.349 (IVA), Ley 20.628 (Ganancias), Ley 27.430 (Regimen Penal Tributario reformado por Ley 27.743), Convenio Multilateral 18/08/1977*
+*Nota: Ganancia Minima Presunta (Ley 25.063) derogada desde ejercicio 2019 (art. 76 Ley 27.260)*
+*Reforma fiscal 2024: Ley 27.743 (Paquete Fiscal) - moratoria, blanqueo, Bienes Personales, Ganancias, Monotributo, regimen penal tributario*
+*Incorpora audit de gaps post-reforma 2024: Diego Fernandez - Sovra (mayo 2026)*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
