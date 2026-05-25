@@ -103,6 +103,8 @@ git pull
 
 El `git pull` trae los cambios más recientes. Si dice "Already up to date" ya tenés la versión actual.
 
+Una vez ejecutado, todos los archivos del sistema quedan en tu computadora en la carpeta `C:\Users\TU USUARIO\claude-for-legal-argentina\argentina\`. Desde ahí vas a adjuntarlos en Claude cuando el sistema te lo pida.
+
 #### Paso 2: Configurar el perfil del estudio
 
 El archivo `legal.local.md.template` es tu configuración personal. Le dice al sistema quién sos, en qué fuero trabajás y cómo trabajás, sin que tengas que repetirlo en cada sesión. Es privado: nunca se sube al repositorio.
@@ -129,17 +131,7 @@ Copiás el resultado y lo guardás como `C:\Users\TU USUARIO\claude-for-legal-ar
 echo "legal.local.md" >> .gitignore
 ```
 
-#### Paso 3: Usar el sistema
-
-1. Abrí el Explorador de Windows y navegá hasta la carpeta donde clonaste el repositorio (por defecto queda en `C:\Users\TU USUARIO\claude-for-legal-argentina\argentina\`).
-2. Elegí el archivo que corresponde a tu caso. Por ejemplo, si el caso es laboral, el archivo es `laboral-CLAUDE.md`. Los perfiles disponibles están en la tabla de la sección [Perfiles por área](#perfiles-por-área).
-3. Hacé clic derecho sobre el archivo → **Abrir con** → **Bloc de notas** (o cualquier editor de texto).
-4. Seleccioná todo el contenido con `Ctrl+A` y copialo con `Ctrl+C`.
-5. Abrí una conversación nueva en [Claude.ai](https://claude.ai), pegá el contenido con `Ctrl+V`, describí el caso y subí los documentos que tengas.
-
-El sistema opera con todas sus capacidades: diagnóstico previo del material, detección de argumentos sin norma de respaldo, alertas de normas inestables, marcadores para vacíos probatorios y jurisprudencia no aportada.
-
-#### Paso 4: Mantener el sistema actualizado
+#### Paso 3: Mantener el sistema actualizado
 
 El repositorio no se actualiza solo con el plan gratuito. Cada vez que haya cambios - perfiles de área, alertas normativas, correcciones - los bajás con un solo comando:
 
@@ -150,7 +142,7 @@ git pull
 
 Hacelo antes de cada sesión de trabajo, o cuando veas un aviso de actualización en el repositorio. El pull es instantáneo y nunca pisa tu `legal.local.md` porque ese archivo está protegido por el `.gitignore`.
 
-#### Paso 5: Crear el Project en Claude.ai y cargar los perfiles
+#### Paso 4: Crear el Project en Claude.ai y cargar los perfiles
 
 En un chat nuevo de Claude adjuntás el archivo `C:\Users\TU USUARIO\claude-for-legal-argentina\argentina\CLAUDE.md`, escribís **"Corré la entrevista de configuración"** y completás las preguntas. El sistema te entrega un `CLAUDE.md` personalizado con los datos de tu práctica.
 
