@@ -324,9 +324,9 @@ Todos tienen instalación por URL (Opción 1). Todos son gratuitos.
 
 ### Conectores de la comunidad
 
-Requieren instalación por comando o manual. Solo para usuarios con Claude Code instalado.
+Requieren instalación por comando o manual. Los conectores con `uvx` requieren Claude Code instalado. Los que se instalan manualmente desde GitHub (como `scba-mcp-server`) funcionan con Claude Desktop sin Claude Code.
 
-| Conector | Fuente | Función | Comando |
+| Conector | Fuente | Función | Instalación |
 |---|---|---|---|
 | saij-mcp | SAIJ | Jurisprudencia, legislación, doctrina y dictámenes | `claude mcp add saij-mcp -- uvx saij-mcp` |
 | csjn-mcp | CSJN | Fallos de la Corte Suprema | `claude mcp add csjn-mcp -- uvx csjn-mcp` |
@@ -335,6 +335,7 @@ Requieren instalación por comando o manual. Solo para usuarios con Claude Code 
 | tesauro-mcp | SAIJ | Vocabulario jurídico controlado para mejorar búsquedas | `claude mcp add tesauro-mcp -- uvx tesauro-mcp` |
 | guidobonomini | Local | Análisis semántico y terminológico de textos jurídicos | Ver [repositorio](https://github.com/guidobonomini/argentina-law-mcp-server) |
 | macos-use | Desktop | Automatización de portales sin API (PJN, SCBA, IGJ) - solo Mac, solo Claude Code | Ver [repositorio](https://github.com/mediar-ai/mcp-server-macos-use) |
+| scba-mcp-server | SCBA | Sentencias y resoluciones de primera instancia PBA (sentencias.scba.gov.ar): búsqueda por organismo, fecha y texto libre; descarga y guarda documentos en disco. Requiere Chrome + chromedriver instalados localmente. No cubre JUBA (Cámaras / SCBA). | Ver [repositorio](https://github.com/FacundoEmanuel/scba-mcp-server) |
 
 ---
 
@@ -349,6 +350,7 @@ Accedé directamente y pegá el texto en la sesión. Son la fuente de verdad ant
 | Normas PBA | normas.gba.gob.ar |
 | Boletín Oficial PBA | boletinoficial.gba.gob.ar |
 | Jurisprudencia SCBA y cámaras PBA | juba.scba.gov.ar |
+| Sentencias y resoluciones primera instancia PBA | sentencias.scba.gov.ar |
 | Jurisprudencia CSJN | sj.csjn.gov.ar |
 | Jurisprudencia SAIJ | saij.gob.ar |
 | Jurisprudencia CABA y fueros nacionales | jusbaires.gob.ar |
