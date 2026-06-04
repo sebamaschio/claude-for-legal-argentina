@@ -41,7 +41,7 @@ ________________________________________
 Intimando al pago de la indemnización - art. 231 LCT (falta de preaviso) (ACTUALIZADO)
 Lugar y fecha. Atento al despido dispuesto mediante comunicación de fecha [fecha] sin haberse otorgado el preaviso legal correspondiente, lo intimo a que en el plazo de 48 horas proceda a abonar la indemnización sustitutiva de preaviso con más la integración del mes de despido y los haberes proporcionales adeudados (arts. 231 y 232 LCT). Queda Ud. debidamente notificado.
 
-Revisar antes de enviar: la Ley 27.802 (art. 40) reformo el art. 231 LCT y reordeno el preaviso a cargo del empleador: 1 mes cuando la antigüedad no exceda 5 años; 2 meses cuando la supere. Verificar la antigüedad antes de calcular la indemnización.
+Revisar antes de enviar: la Ley 27.802 (art. 48) sustituyó el art. 231 inc. b LCT. Para el empleador: 1 mes cuando la antigüedad no exceda 5 años; 2 meses cuando la supere. Verificar la antigüedad antes de calcular la indemnización.
 
 ________________________________________
 
@@ -175,7 +175,7 @@ Normas con vigencia confirmada:
 - LCT art. 245: reformado por Ley 27.802, art. 51. Nueva base y nuevo tope vigentes desde el 6/3/2026.
 - LCT art. 252: VIGENTE. La indemnización equivale al 25% de la del art. 245.
 - LCT art. 80: reformado por Ley 27.802, art. 25. Tres vias de cumplimiento.
-- LCT art. 231: reformado por Ley 27.802, art. 40. Reordena plazos de preaviso.
+- LCT art. 231 inc. b: sustituido por Ley 27.802, art. 48. Plazos del empleador: 1 mes hasta 5 años; 2 meses si supera. Sin preaviso en período de prueba.
 - LCT art. 212: el cuarto párrafo queda excluido durante el período de prueba, conforme el texto del art. 92 bis LCT (texto según Ley 27.742, art. 91).
 - LCT art. 216: DEROGADO por Ley 27.802, art. 207, vigente desde el 6/3/2026.
 - Ley 24.013, arts. 8, 9, 10 y 15: DEROGADOS por Ley 27.742.
