@@ -1,12 +1,47 @@
 ﻿---
 name: plazos-pba
-description: Calcula plazos procesales bajo el régimen de la SCBA. Aplica la regla martes/viernes, ferias judiciales, asuetos, acordadas de suspensión y plazos especiales por fuero. Útil para contestaciones, recursos, traslados, cautelares y cualquier vencimiento procesal en PBA.
+description: Calcula plazos procesales bajo el régimen de la SCBA. Aplica la regla martes/viernes, ferias judiciales, asuetos, acordadas de suspensión y plazos especiales por fuero. Útil para contestaciones, recursos, traslados, cautelares y cualquier vencimiento procesal en PBA. Emite alerta de plazo fatal cuando corresponde.
 argument-hint: "<fecha de notificación | resolución> <tipo de plazo o acto>"
 ---
 
 # Cálculo de plazos procesales PBA
 
 Herramienta de cálculo y verificación de plazos bajo el régimen de la SCBA. No reemplaza la consulta del calendario judicial oficial.
+
+## Tipos de plazo - distinción obligatoria
+
+Antes de calcular, identificar el tipo de plazo:
+
+Días hábiles judiciales: lunes a viernes excluidos feriados, asuetos judiciales y ferias. Aplica en procesos civiles, comerciales, laborales y contencioso administrativos PBA.
+
+Días hábiles administrativos: lunes a viernes excluidos feriados nacionales y asuetos del organismo. No coinciden necesariamente con los hábiles judiciales. Aplica en recursos y reclamos ante la Administración (Dec-Ley 7647/70 PBA, LNPA nacional).
+
+Días corridos: todos los días del calendario incluidos sábados, domingos y feriados. Aplica en plazos sustantivos de contratos y algunos plazos del CCyC.
+
+Meses o años: se computan de fecha a fecha (art. 6 CCyC [VERIFICAR VIGENCIA]). Si el último día es inhábil, el plazo vence el primer día hábil siguiente.
+
+Regla operativa: no asumir el tipo de plazo. Si la consulta no lo especifica, preguntar antes de calcular.
+
+## Alerta de plazo fatal - emitir siempre que corresponda
+
+Antes de calcular el plazo, verificar si es un plazo cuyo vencimiento extingue el derecho o la acción. Si lo es, emitir al inicio:
+
+    [ALERTA PLAZO FATAL: norma - plazo - fecha de inicio del cómputo - vencimiento estimado]
+
+Ejemplos:
+
+    [ALERTA PLAZO FATAL: art. 310 inc. 1 CPCC PBA - caducidad de instancia - 6 meses - último acto impulsorio: calcular]
+    [ALERTA PLAZO FATAL: art. 2560 CCyC - prescripción genérica - 5 años - desde exigibilidad del crédito: calcular]
+    [ALERTA PLAZO FATAL: art. 244 CPCC PBA - apelación - 5 días hábiles - notificación de sentencia: calcular]
+    [ALERTA PLAZO FATAL: art. 256 LCT - prescripción laboral - 2 años - desde cada crédito exigible: calcular]
+
+No usar para plazos procesales internos ordinarios (traslados, vistas, prueba). Reservar para plazos cuyo vencimiento cierra definitivamente la vía.
+
+## Exclusiones - no calcular con este skill
+
+- Plazos ante AFIP/ARCA: tienen días hábiles administrativos propios que cambian por RG con frecuencia. Usar: `[REVISIÓN NORMATIVA REQUERIDA: plazo ante AFIP/ARCA - verificar RG vigente]`
+- Plazos ante ARBA y organismos recaudadores provinciales: calendarios propios de cada jurisdicción. Usar: `[REVISIÓN NORMATIVA REQUERIDA: plazo ante organismo recaudador provincial - verificar normativa vigente de la jurisdicción]`
+- Plazos ante ANSES y Comisiones Médicas previsionales: régimen propio (Ley 24.241 y complementarias). Usar: `[REVISIÓN NORMATIVA REQUERIDA: plazo previsional/ANSES - verificar Ley 24.241 y normativa complementaria vigente]`
 
 ## Regla fundamental - Martes/viernes SCBA
 
@@ -55,6 +90,7 @@ Durante la feria los plazos quedan suspendidos. Solo corren si el juzgado fue ha
 | Aclaratoria | 3 días hábiles | Art. 166 inc. 2 CPCC PBA [VERIFICAR VIGENCIA] |
 | Caducidad de instancia (1° instancia) | 6 meses | Art. 310 inc. 1 CPCC PBA [VERIFICAR VIGENCIA] |
 | Caducidad de instancia (Cámara) | 3 meses | Art. 310 inc. 2 CPCC PBA [VERIFICAR VIGENCIA] |
+| Ofrecimiento de prueba (ordinario) | Con la demanda / contestación | Art. 333 CPCC PBA [VERIFICAR VIGENCIA] |
 | Alegatos | 6 días hábiles c/u | Art. 482 CPCC PBA [VERIFICAR VIGENCIA] |
 
 ## Plazos comunes - Fuero laboral PBA (Ley 11.653 [VERIFICAR VIGENCIA])
@@ -79,38 +115,47 @@ Durante la feria los plazos quedan suspendidos. Solo corren si el juzgado fue ha
 |------|-------|-------|
 | Prescripción genérica | 5 años | Art. 2560 CCyC [VERIFICAR VIGENCIA] |
 | Responsabilidad civil extracontractual | 3 años | Art. 2561 CCyC [VERIFICAR VIGENCIA] |
+| Daños por agresión sexual a menores | 10 años desde mayoría de edad | Art. 2561 CCyC [VERIFICAR VIGENCIA] |
 | Acciones posesorias | 1 año | Art. 2564 CCyC [VERIFICAR VIGENCIA] |
 | Nulidad relativa | 2 años | Art. 2562 CCyC [VERIFICAR VIGENCIA] |
 | Créditos laborales | 2 años | Art. 256 LCT [VERIFICAR VIGENCIA] |
 | Acciones sucesorias | 10 años | Art. 2560 CCyC [VERIFICAR VIGENCIA] |
 
+## Plazos administrativos PBA (Dec-Ley 7647/70 [VERIFICAR VIGENCIA])
+
+| Acto | Plazo | Nota |
+|------|-------|------|
+| Recurso de revocatoria | 10 días hábiles administrativos | Desde notificación del acto |
+| Recurso jerárquico | 15 días hábiles administrativos | Desde notificación o rechazo de revocatoria |
+| Denuncia de ilegitimidad | Sin plazo | Solo si venció el plazo de recurso |
+| Acción contencioso administrativa (Ley 12.008) | 90 días hábiles judiciales | Desde agotamiento de la vía |
+
 ## Cómputo paso a paso
 
-Cuando el usuario aporte una fecha de notificación, calcular así:
-
-1. Identificar el día de la semana de la notificación.
-2. Determinar el inicio del plazo (próximo martes o viernes).
-3. Verificar si ese día es hábil (no feriado, no asueto, no feria).
-4. Contar los días hábiles del plazo (excluir sábados, domingos, feriados, asuetos).
-5. Determinar el día de vencimiento.
-6. Verificar plazo de gracia si aplica (primera hora hábil del día siguiente).
-7. Alertar si el vencimiento cae en feria o feriado: se corre al siguiente día hábil.
+1. Identificar el tipo de plazo (hábiles judiciales / hábiles administrativos / corridos).
+2. Identificar el día de la semana de la notificación.
+3. Determinar el inicio del plazo (próximo martes o viernes si es fuero PBA).
+4. Verificar si ese día es hábil.
+5. Contar los días del plazo según el tipo.
+6. Determinar el día de vencimiento.
+7. Verificar plazo de gracia si aplica (primera hora hábil del día siguiente).
+8. Alertar si el vencimiento cae en feria o feriado: se corre al siguiente día hábil.
 
 Salida:
 
     CÁLCULO DE PLAZO
     Acto notificado: <descripción>
+    Tipo de plazo: <hábiles judiciales | hábiles administrativos | corridos>
     Fecha de notificación: <día, fecha>
     Inicio del plazo: <martes/viernes> <fecha>
-    Plazo: <X días hábiles>
+    Plazo: <X días>
     Vencimiento: <día, fecha>
     Plazo de gracia hasta: <día siguiente, primera hora hábil>
     Observaciones: <feriados, ferias, asuetos en el período>
-    ALERTA: <si hay riesgo de error en el cálculo>
+    ALERTA PLAZO FATAL: <si corresponde>
 
 ## Acordadas relevantes
 
-Mencionar siempre que apliquen:
 - Acordada anual de feria judicial (SCBA dicta una por año).
 - Acordadas de suspensión de plazos por eventos extraordinarios.
 - Acordada de notificaciones electrónicas MEV [VERIFICAR VIGENCIA].
