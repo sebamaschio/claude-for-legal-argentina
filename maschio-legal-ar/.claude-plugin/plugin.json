@@ -1,0 +1,10 @@
+﻿{
+  "name": "maschio-legal-ar",
+  "version": "1.0.0",
+  "description": "Plugin de práctica forense argentina. Cubre redacción de escritos judiciales, triage de documentos, consulta de expedientes, comunicaciones fehacientes, presentación electrónica, briefing de audiencias, revisión de contratos, evaluación de riesgo procesal y control de cumplimiento normativo. Fuero PBA y Justicia Nacional.",
+  "author": {
+    "name": "Sebastián Maschio",
+    "email": "sebamaschio@gmail.com"
+  },
+  "keywords": ["derecho argentino", "PBA", "forense", "escritos judiciales", "Lex Doctor"]
+}
