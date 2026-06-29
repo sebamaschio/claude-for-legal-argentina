@@ -545,3 +545,5 @@ Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)
 Abogado (CPACF) · CABA y GBA · Legal tech & IA aplicada a práctica jurídica argentina
 
 *Última actualización: junio 2026*
+#   t e s t  
+ 
